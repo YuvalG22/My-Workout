@@ -5,18 +5,22 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/black"
+    android:orientation="vertical"
     tools:context=".WorkoutsFragment">
 
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="50dp">
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="150dp"
             android:layout_height="150dp"
             app:cardCornerRadius="20dp"
-            app:strokeWidth="0dp">
+            app:strokeWidth="0dp"
+            android:layout_marginEnd="20dp">
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
@@ -29,7 +33,8 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             app:cardCornerRadius="20dp"
-            app:strokeWidth="0dp">
+            app:strokeWidth="0dp"
+            android:layout_marginStart="20dp">
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
@@ -37,6 +42,27 @@
                 android:background="@drawable/dumbbell"/>
 
         </com.google.android.material.card.MaterialCardView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="20dp"
+            app:strokeWidth="0dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/dumbbell"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

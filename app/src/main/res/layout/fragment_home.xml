@@ -19,10 +19,11 @@
             android:fontFamily=""
             android:gravity="center"
             android:padding="16dp"
-            android:text="My Workout"
+            android:text="@string/home_title"
             android:textColor="@color/dodger_blue"
             android:textStyle="bold"
-            android:textSize="40sp" />
+            android:textSize="40sp"
+            tools:ignore="HardcodedText" />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:layout_width="100dp"
@@ -32,9 +33,8 @@
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
