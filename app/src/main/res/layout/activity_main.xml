@@ -21,6 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        style="@style/CustomBottomNavigationView"
         app:menu="@menu/bottom_nav_menu"
         app:labelVisibilityMode="labeled" />
 

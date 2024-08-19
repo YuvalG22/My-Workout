@@ -3,13 +3,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".LogFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Workout History"
+        android:padding="16dp"
+        android:textSize="40sp"
+        android:fontFamily="@font/librefranklin2"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/dodger_blue"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_LST_workouts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_centerInParent="true"
-        android:text="Log" />
+        android:layout_below="@id/title"
+        tools:listitem="@layout/workout_item"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/main_LBL_empty_workouts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Workouts Yet"
+        android:layout_centerInParent="true"
+        android:textSize="40sp"
+        android:textColor="@color/dodger_blue"
+        android:visibility="invisible"/>
 
 </RelativeLayout>

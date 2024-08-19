@@ -1,19 +1,14 @@
 package com.example.myworkout;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
-import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -21,7 +16,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     private BottomNavigationView main_NAV_bar;
     private FrameLayout main_FRG_frame;
     private HomeFragment homeFragment;
-    private WorkoutsFragment workoutsFragment;
+    private ExercisesFragment workoutsFragment;
     private LogFragment logFragment;
     private ProfileFragment profileFragment;
 
@@ -29,10 +24,11 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         findViews();
         fixBottomNavBar();
         homeFragment = new HomeFragment();
-        workoutsFragment = new WorkoutsFragment();
+        workoutsFragment = new ExercisesFragment();
         logFragment = new LogFragment();
         profileFragment = new ProfileFragment();
         main_NAV_bar.setOnItemSelectedListener(this);
